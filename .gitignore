@@ -1,0 +1,10 @@
+# Allowlist: ignore everything, then re-include only notebooks
+*
+!*/
+!*.ipynb
+!/README.md
+!/.gitignore
+
+# Never commit notebook autosaves or data
+.ipynb_checkpoints/
+data/
