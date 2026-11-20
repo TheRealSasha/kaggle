@@ -3,6 +3,7 @@
 !*/
 !*.ipynb
 !/README.md
+!/cookbook/RECIPES.md
 !/.gitignore
 
 # Never commit notebook autosaves or data
