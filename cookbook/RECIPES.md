@@ -8,6 +8,7 @@ These are checklists to follow. The notebooks show the code. Links point to the 
 | [`regression/`](regression/linear_models_ols_ridge_lasso_pca.ipynb) | OLS → Ridge → Lasso → PCA |
 | [`classification/`](classification/logistic_regression_and_nonlinear_classifiers.ipynb) | logistic regression + non-linear classifiers |
 | [`pipelines_and_metrics/`](pipelines_and_metrics) | transformers, pipelines, regression & classification metrics, statsmodels tests |
+| [`model_comparison/`](model_comparison/model_comparison_framework.ipynb) | baseline → many models → compare → tune top few → test (the framework for step 9) |
 
 ---
 
@@ -31,7 +32,7 @@ These are checklists to follow. The notebooks show the code. Links point to the 
    - Fix dtypes and decide what missing means: "absent" (fill a constant) or "unknown" (impute).
 7. **Feature engineering.** Ratios, counts, dates (day of week, month), text extracts (e.g. title from name), group aggregates.
 8. **Preprocessing pipeline.** `ColumnTransformer` with a numeric branch (impute → scale) and a categorical branch (impute → one-hot). See Recipe 2.
-9. **Model ladder.** Linear model → random forest → gradient boosting. Compare them with the **same CV folds**.
+9. **Model ladder.** Linear model → random forest → gradient boosting. Compare them with the **same CV folds** using [`compare()`](model_comparison/model_comparison_framework.ipynb).
 10. **Tune** the best one or two with `GridSearchCV` on the whole pipeline.
 11. **Diagnose.** Use out-of-fold predictions: residual plots, confusion matrix, learning curve, the worst errors.
 12. **Final fit** on all the training data → predict on test → clip to the valid range → write the submission.
